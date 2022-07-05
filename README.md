@@ -1,4 +1,4 @@
-# restful-api
+# rental-restful-api
 
 Custom API and Auth Service for Rental Software built from Felix Hildebrandt as final thesis for Software Engineering in 2020.
 It also features a SQL and Postman architecture for test and build purposes.
