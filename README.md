@@ -7,7 +7,11 @@ It also features a SQL and Postman architecture for test and build purposes.
 
 ## Description
 
-The API was the backend for a car rental service that ran within the browser (HTML+PHP) and Mobile (iOS)
+The API was the backend for a car rental service that ran within the browser (HTML+PHP) and Mobile (iOS) which can be seen in the screenshots.
+
+## API Wiki
+
+[Within this Repo](./wiki/)
 
 ## Screenshots
 
