@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "809e8190-7e46-4122-8855-2d12a5e703d4",
+		"name": "Firmendatentests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Firmendaten_Get_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/firmendaten/firmendaten_get.php/?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"firmendaten",
+						"firmendaten_get.php",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Firmendaten_For_PDF_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/firmendaten/firmendaten_for_pdf.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"firmendaten",
+						"firmendaten_for_pdf.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Firmendaten_Update_Test",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vorname_inhaber\": \"Lisa\"\n    \"oeffnet\": \"09:56\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/firmendaten/firmendaten_update.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"firmendaten",
+						"firmendaten_update.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

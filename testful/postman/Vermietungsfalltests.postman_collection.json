@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "612975ee-03a5-4522-b632-5efdaf537885",
+		"name": "Vermietungsfalltests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Vermietungsfall_Get_All_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/vermietungsfall/vermietungsfall_get_all.php?token=5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"vermietungsfall",
+						"vermietungsfall_get_all.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vermietungsfall_Get_All_Dates_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/vermietungsfall/vermietungsfall_get_all.php?token=5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"vermietungsfall",
+						"vermietungsfall_get_all.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vermietungsfall_Get_All_Combined_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/vermietungsfall/vermietungsfall_get_all.php?token=5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"vermietungsfall",
+						"vermietungsfall_get_all.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vermietungsfall_Get_My_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/vermietungsfall/vermietungsfall_get_my.php/?mieter_id=5&token=5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"vermietungsfall",
+						"vermietungsfall_get_my.php",
+						""
+					],
+					"query": [
+						{
+							"key": "mieter_id",
+							"value": "5"
+						},
+						{
+							"key": "token",
+							"value": "5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vermietungsfall_Get_Single_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/vermietungsfall/vermietungsfall_get_single.php/?termin_abgabe=2020-01-05&mieter_id=5&fahrzeug_id=3&token=5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"vermietungsfall",
+						"vermietungsfall_get_single.php",
+						""
+					],
+					"query": [
+						{
+							"key": "termin_abgabe",
+							"value": "2020-01-05"
+						},
+						{
+							"key": "mieter_id",
+							"value": "5"
+						},
+						{
+							"key": "fahrzeug_id",
+							"value": "3"
+						},
+						{
+							"key": "token",
+							"value": "5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vermietungsfall_Get_Single_Combined_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/vermietungsfall/vermietungsfall_get_single.php/?termin_abgabe=2020-01-05&mieter_id=5&fahrzeug_id=3&token=5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"vermietungsfall",
+						"vermietungsfall_get_single.php",
+						""
+					],
+					"query": [
+						{
+							"key": "termin_abgabe",
+							"value": "2020-01-05"
+						},
+						{
+							"key": "mieter_id",
+							"value": "5"
+						},
+						{
+							"key": "fahrzeug_id",
+							"value": "3"
+						},
+						{
+							"key": "token",
+							"value": "5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vermietungsfall_Get_Dates_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/vermietungsfall/vermietungsfall_get_dates.php/?fahrzeug_id=3&token=5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"vermietungsfall",
+						"vermietungsfall_get_dates.php",
+						""
+					],
+					"query": [
+						{
+							"key": "fahrzeug_id",
+							"value": "3"
+						},
+						{
+							"key": "token",
+							"value": "5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vermietungsfall_Update_Test",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"termin_abgabe\": \"2020-01-05\",\n    \"termin_rueckgabe\": \"2020-03-06\",\n    \"mieter_id\": 5,\n    \"fahrzeug_id\": 3,\n    \"status\": 9\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/vermietungsfall/vermietungsfall_update.php?token=5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"vermietungsfall",
+						"vermietungsfall_update.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vermietungsfall_Cancel_Test",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"termin_abgabe\": \"2013-03-05\",\n    \"termin_rueckgabe\": \"2017-03-05\",\n    \"mieter_id\": 6,\n    \"fahrzeug_id\": 2,\n    \"status\": 9\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/vermietungsfall/vermietungsfall_update.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"vermietungsfall",
+						"vermietungsfall_update.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vermietungsfall_Create_Test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"termin_abgabe\": \"2022-01-06\",\n    \"termin_rueckgabe\": \"2022-01-13\",\n    \"mieter_id\": 7,\n    \"fahrzeug_id\": 3,\n    \"status\": 0\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/vermietungsfall/vermietungsfall_create.php?token=5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"vermietungsfall",
+						"vermietungsfall_create.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vermietungsfall_Delete_Test",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"termin_abgabe\": \"2022-01-06\",\n\t\"mieter_id\": 7,\n    \"fahrzeug_id\": 3\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/vermietungsfall/vermietungsfall_delete.php?token=5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"vermietungsfall",
+						"vermietungsfall_delete.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5d643e58ccfe4d8b955b0745dafb96c7bafcfce063039b015e9186f1d4e81792"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

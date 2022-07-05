@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "f2637e70-d41a-460a-90a9-ecc552cddb07",
+		"name": "Mitarbeitertests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Mitarbeiter_Get_All_List_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/mitarbeiter/mitarbeiter_get_all_list.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"mitarbeiter",
+						"mitarbeiter_get_all_list.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mitarbeiter_Get_Single_List_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/mitarbeiter/mitarbeiter_get_single_list.php/?login_name=fhildeb&token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"mitarbeiter",
+						"mitarbeiter_get_single_list.php",
+						""
+					],
+					"query": [
+						{
+							"key": "login_name",
+							"value": "fhildeb"
+						},
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mitarbeiter_Get_Single_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/mitarbeiter/mitarbeiter_get_single.php/?login_name=fhildeb&token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"mitarbeiter",
+						"mitarbeiter_get_single.php",
+						""
+					],
+					"query": [
+						{
+							"key": "login_name",
+							"value": "fhildeb"
+						},
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mitarbeiter_Get_All_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/mitarbeiter/mitarbeiter_get_all.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"mitarbeiter",
+						"mitarbeiter_get_all.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mitarbeiter_Update_Test",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nachname\": \"Heinzmann\",\n    \"login_name\": \"fhildeb\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/mitarbeiter/mitarbeiter_update.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"mitarbeiter",
+						"mitarbeiter_update.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mitarbeiter_Create_Test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vorname\": \"Alfred\",\n    \"nachname\": \"Mehner\",\n    \"login_name\": \"alfredmehn12\",\n    \"passwort\": \"SWT_autoverleih2019\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/mitarbeiter/mitarbeiter_create.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"mitarbeiter",
+						"mitarbeiter_create.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mitarbeiter_Check_Login_Test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login_name\": \"fhildeb\",\n    \"passwort\": \"SWT_autoverleih2019\"\n    \n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/mitarbeiter/mitarbeiter_check_login.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"mitarbeiter",
+						"mitarbeiter_check_login.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mitarbeiter_Delete_Test",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login_name\": \"fhildeb\",\n    \"passwort\": \"SWT_autoverleih2019\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/mitarbeiter/mitarbeiter_delete.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"mitarbeiter",
+						"mitarbeiter_delete.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

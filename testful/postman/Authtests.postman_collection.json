@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "78ce954b-abcb-424d-8da9-acd8d4387bb3",
+		"name": "Authtests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token_Test",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"login\": \"fhildeb\",\n\"passwort\": \"SWT_autoverleih2019\",\n\"type\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/auth/token.php/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"auth",
+						"token.php",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check_Token_Test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/auth/proof/check_token.php/?token=f6de9a58b4fd8cccb1f9670e0e4c3191f33555de11a9a4ad50c56d3fac1274d9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"auth",
+						"proof",
+						"check_token.php",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "f6de9a58b4fd8cccb1f9670e0e4c3191f33555de11a9a4ad50c56d3fac1274d9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token_Get_Info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/auth/proof/check_token.php/?token=f6de9a58b4fd8cccb1f9670e0e4c3191f33555de11a9a4ad50c56d3fac1274d9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"auth",
+						"proof",
+						"check_token.php",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "f6de9a58b4fd8cccb1f9670e0e4c3191f33555de11a9a4ad50c56d3fac1274d9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token_Logout_Test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"grant_type\": \"client_credentials\",\n\"client_id\": \"testclient\",\n\"client_secret\": \"testpass\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/auth/proof/token_logout.php/?token=0b46963af6bce0c7c12adea841b7906977be861dc33c0e2df53badfef6936ea9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"auth",
+						"proof",
+						"token_logout.php",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "0b46963af6bce0c7c12adea841b7906977be861dc33c0e2df53badfef6936ea9"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

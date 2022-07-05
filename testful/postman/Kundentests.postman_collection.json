@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "b19bb3a7-78bf-4966-a5be-eae8f6838bd9",
+		"name": "Kundentests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Kunde_Get_All_List_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/kunde/kunde_get_all_list.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"kunde",
+						"kunde_get_all_list.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kunde_Get_Single_List_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/kunde/kunde_get_single_list.php/?kunden_id=2&token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"kunde",
+						"kunde_get_single_list.php",
+						""
+					],
+					"query": [
+						{
+							"key": "kunden_id",
+							"value": "2"
+						},
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kunde_Get_Single_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/kunde/kunde_get_single.php/?kunden_id=2&token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"kunde",
+						"kunde_get_single.php",
+						""
+					],
+					"query": [
+						{
+							"key": "kunden_id",
+							"value": "2"
+						},
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kunde_Get_All_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/kunde/kunde_get_all.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"kunde",
+						"kunde_get_all.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kunde_Update_Test",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"kunden_id\": 5,\n    \"strasse\": \"Dorfstrasse\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/kunde/kunde_update.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"kunde",
+						"kunde_update.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kunde_Create_Test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vorname\": \"Harald\",\n    \"nachname\": \"Grube\",\n    \"strasse\": \"Strasse am Seeufer\",\n    \"hausnr\": \"18b\",\n    \"ort\": \"Sylt\",\n    \"land\": \"Deutschland\",\n    \"plz\": 25980,\n    \"email\": \"haland@grube.de\",\n    \"telefonnummer\": \"+01520-9889-645\",\n    \"geburtsdatum\": \"1949-09-19\",\n    \"fuehrerschein\": \"0xfffff\"\n    \n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/kunde/kunde_create.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"kunde",
+						"kunde_create.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kunde_Check_Login_Test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"harald1@grube.de\",\n    \"passwort\": \"meinPasswort123!\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/kunde/kunde_check_login.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"kunde",
+						"kunde_check_login.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kunde_Delete_Test",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"kunden_id\": 6\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/kunde/kunde_delete.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"kunde",
+						"kunde_delete.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

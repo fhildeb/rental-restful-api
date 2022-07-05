@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "0943ae22-5df6-42d2-aa09-31d58291aea4",
+		"name": "Fahrzeugtests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Fahrzeug_Get_Single_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/fahrzeug/fahrzeug_get_single.php/?fahrzeug_id=2&token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"fahrzeug",
+						"fahrzeug_get_single.php",
+						""
+					],
+					"query": [
+						{
+							"key": "fahrzeug_id",
+							"value": "2"
+						},
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fahrzeug_Get_All_Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/azure/restful/api/fahrzeug/fahrzeug_get_all.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"fahrzeug",
+						"fahrzeug_get_all.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fahrzeug_Update_Test",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"marke\": \"Daaaimler\",\n    \"fahrzeug_id\": 2\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/fahrzeug/fahrzeug_update.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"fahrzeug",
+						"fahrzeug_update.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fahrzeug_Create_Test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"marke\": \"Mercedes Benz\",\n    \"modell\": \"AMG CLS\",\n    \"typ\": \"Sportwagen\",\n    \"kennzeichen\": \"AMG-CLS-66\",\n    \"farbe\": \"schwarz\",\n    \"tagessatz\": 200.95,\n    \"sitzplaetze\": 2,\n    \"status\": 1,\n    \"maengel\": \"0x800\",\n    \"fahrzeugklasse\": \"0x800\",\n    \"besonderheiten\": \"nur Super Benzin tanken\",\n    \"fahrzeug_bild\": \"/data/mercedes_benz_666_01\",\n    \"bild_anzahl\": -1\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/fahrzeug/fahrzeug_create.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"fahrzeug",
+						"fahrzeug_create.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fahrzeug_Delete_Test",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fahrzeug_id\": 3\n}"
+				},
+				"url": {
+					"raw": "http://localhost/azure/restful/api/fahrzeug/fahrzeug_delete.php?token=9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"azure",
+						"restful",
+						"api",
+						"fahrzeug",
+						"fahrzeug_delete.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "9ffb4a617f67b019d5db08af8b25beace7d404d4a6dcdcc887e8a2e9d1ccadf6"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
