@@ -9,8 +9,6 @@ It features a SQL and Postman architecture for test and build purposes.
 
 The API was the backend for a car rental service that ran within the browser (HTML+PHP) and Mobile (iOS) which can be seen in the screenshots. The API was operated as a client-server model that was connected to a external database.
 
-> Frontends are only used for illustrative purposes and not included in the repository, as they were built by students utilizing this API for their own software products.
-
 ## Features
 
 - Renting
@@ -34,6 +32,8 @@ Within this repository, API tests to all calls are included in the `/testful` fo
 [Link to Testscripts](/testful/)
 
 ## Screenshots
+
+> Frontends are only used for illustrative purposes and not included in the repository, as they were built by students utilizing this API for their own software products. However, the frontends show what functionality the API service is capable of.
 
 ![Screenshot 1](./img/screenshot_01.png)
 ![Screenshot 2](./img/screenshot_02.png)
