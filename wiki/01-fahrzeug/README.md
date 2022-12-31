@@ -1,6 +1,8 @@
 # **Fahrzeug**
+
 Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eigenschaften, API-Abfragen und des Backends für Fahrzeuge.
-## **1 Attribute und Eigenschaften der Klasse "Fahrzeug"**
+
+## **1. Attribute und Eigenschaften der Klasse "Fahrzeug"**
 
 ```
     fahrzeug_id
@@ -24,7 +26,7 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
     modell
         ->Paramerter:       nötig
         ->Art:              alphanumerisch
-        ->Feldinhalt:       begrenzt auf UTF8-Standardzeichen mit Bindestrich 
+        ->Feldinhalt:       begrenzt auf UTF8-Standardzeichen mit Bindestrich
         ->Besonderheiten:   Sonderzeichen werden nicht akzeptiert
                             min 1, max 50 Zeichen
 
@@ -67,7 +69,7 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
         ->Paramerter:       nötig
         ->Art:              numerisch
         ->Feldinhalt:       begrenzter einstelliger Integer: 0 | 1 | 2 | 3 | 9
-        ->Erläuterung:      0 == verfügbar, 1 == ausgeliehen, 2 == reserviert, 
+        ->Erläuterung:      0 == verfügbar, 1 == ausgeliehen, 2 == reserviert,
                             3 == in Wartung, 9 == ausrangiert
         ->Besonderheiten:   darf beim erstellen nicht mit 9 initialisiert werden
                             beim Erstellen: 0
@@ -75,8 +77,8 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
     maengel
         ->Paramerter:       optional
         ->Art:              numerisch
-        ->Feldinhalt:       begrenzt auf Hexadezimalzahl welche im String 
-                            übergeben wird. In der Datenbank wird dieser als Bitfolge 
+        ->Feldinhalt:       begrenzt auf Hexadezimalzahl welche im String
+                            übergeben wird. In der Datenbank wird dieser als Bitfolge
                             mit maximal 64 Stellen gespeichert
         ->Erläuterung:      folgt (siehe Glossar)
         ->Besonderheiten:   Vor dem Zahlenwert wird 0x vorangesetzt
@@ -87,13 +89,13 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
     fahrzeugklasse
         ->Paramerter:       nötig
         ->Art:              numerisch
-        ->Feldinhalt:       begrenzt auf Hexadezimalzahl welche im String 
-                            übergeben wird. In der Datenbank wird dieser als Bitfolge 
+        ->Feldinhalt:       begrenzt auf Hexadezimalzahl welche im String
+                            übergeben wird. In der Datenbank wird dieser als Bitfolge
                             mit maximal 64 Stellen gespeichert
         ->Erläuterung:      AM = 0x10000, A1 = 0x08000, A2 = 0x04000, A = 0x02000,
                             B1 = 0x01000, B = 0x00800, C1 = 0x00400, C = 0x00200,
                             D1 = 0x00100, D = 0x00080, BE= 0x00040, C1E= 0x00020
-                            CE = 0x00010, D1E = 0x00008, DE = 0x00004, 
+                            CE = 0x00010, D1E = 0x00008, DE = 0x00004,
                             L = 0x00002, T = 0x00001
         ->Besonderheiten:   Vor dem Zahlenwert wird 0x vorangesetzt
                             maximal 7 Stellen lang (inklusive 0x)
@@ -111,7 +113,7 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
         ->Paramerter:       optional
         ->Art:              alphanumerisch
         ->Feldinhalt:       begrenzt auf UTF8-Standardzeichen
-        ->Besonderheiten:   Sonderzeichen außer Unterschtrich, Bindestrich, Punkt, Slash 
+        ->Besonderheiten:   Sonderzeichen außer Unterschtrich, Bindestrich, Punkt, Slash
                             und Komma werden nicht akzeptiert
         ->Standardwert:     ["/data/fahrzeug/sample.png"] (String)
 
@@ -124,13 +126,15 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
 
 ```
 
-## **2 Abfragen**
+## **2. Abfragen**
+
 ### **2.1 fahrzeug_create**
+
 Create-Skript, welches ein neues Fahrzeug zum Fahrzeug-Angebot hinzufügt. Die Attribute: `maengel, besonderheiten, fahrzeug_bild, bild_anzahl` sind optional anzugeben. Das Fahrzeug-Bild wird seperat über fahrzeug_upload.php-Skript realisiert. Fahrzeug wird standardmäßig mit Status 0 erstellt.
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/fahrzeug/fahrzeug_create.php | CREATE |  --- | --- |
+| Link                              | Methode | Parameter | URL-Anhang |
+| --------------------------------- | ------- | --------- | ---------- |
+| /api/fahrzeug/fahrzeug_create.php | CREATE  | ---       | ---        |
 
 ### Header
 
@@ -157,6 +161,7 @@ Create-Skript, welches ein neues Fahrzeug zum Fahrzeug-Angebot hinzufügt. Die A
     "fahrzeugklasse": "0x4"
     }
 ```
+
 ### Antwort bei Erfolg
 
 ```
@@ -173,13 +178,15 @@ Create-Skript, welches ein neues Fahrzeug zum Fahrzeug-Angebot hinzufügt. Die A
     "text": "[Fehlergrund]"
     }
 ```
+
 ### **2.2 fahrzeug_delete**
+
 Delete-Skript, welches die Daten eines Fahrzeuges aus der Datenbank entfernt
 wenn zu ihm keine Vermietungsfälle in Verbindung stehen
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/fahrzeug/fahrzeug_delete.php | DELETE |  --- | --- |
+| Link                              | Methode | Parameter | URL-Anhang |
+| --------------------------------- | ------- | --------- | ---------- |
+| /api/fahrzeug/fahrzeug_delete.php | DELETE  | ---       | ---        |
 
 ### Header
 
@@ -215,11 +222,12 @@ wenn zu ihm keine Vermietungsfälle in Verbindung stehen
 ```
 
 ### **2.3 fahrzeug_get_all**
+
 Get-Skript, welches die komplette Fahrzeugliste mit allen Informationen zurückgibt
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/fahrzeug/fahrzeug_get_all.php | GET| --- | --- |
+| Link                               | Methode | Parameter | URL-Anhang |
+| ---------------------------------- | ------- | --------- | ---------- |
+| /api/fahrzeug/fahrzeug_get_all.php | GET     | ---       | ---        |
 
 ### Header
 
@@ -270,11 +278,12 @@ Get-Skript, welches die komplette Fahrzeugliste mit allen Informationen zurückg
 ```
 
 ### **2.4 fahrzeug_get_single**
+
 Get-Skript, welches das Fahrzeug der angegebenen Identifikationsnummer zurück gibt
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/fahrzeug/fahrzeug_get_single.php | GET| fahrzeug_id | /?fahrzeug_id=1 |
+| Link                                  | Methode | Parameter   | URL-Anhang      |
+| ------------------------------------- | ------- | ----------- | --------------- |
+| /api/fahrzeug/fahrzeug_get_single.php | GET     | fahrzeug_id | /?fahrzeug_id=1 |
 
 ### Header
 
@@ -319,11 +328,12 @@ Get-Skript, welches das Fahrzeug der angegebenen Identifikationsnummer zurück g
 ```
 
 ### **2.5 fahrzeug_update**
+
 Update-Skript, welches individuell viele Attribute eines Fahrzeuges bearbeitet, wessen Identifikationsnummer angegeben wird. Die Attribute `marke, modell, typ, kennzeichen, farbe, tagessatz, status, maengel, besonderheiten,  bild_anzahl, fahrzeugklasse` können optional angegeben werden um Daten zu aktualisieren. Status kann nur geändert werden wenn Fahrzeug nicht in Vermietungsfall verwickelt ist.
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/fahrzeug/fahrzeug_update.php | UPDATE|  --- | --- |
+| Link                              | Methode | Parameter | URL-Anhang |
+| --------------------------------- | ------- | --------- | ---------- |
+| /api/fahrzeug/fahrzeug_update.php | UPDATE  | ---       | ---        |
 
 ### Header
 
@@ -359,19 +369,20 @@ Update-Skript, welches individuell viele Attribute eines Fahrzeuges bearbeitet, 
     }
 ```
 
-## **3 Backend**
+## **3. Backend**
+
 ### **3.1 fahrzeug_create**
 
 ```
-    $abfrage = 'INSERT INTO ' . 
+    $abfrage = 'INSERT INTO ' .
                 $this->tabelle . '
                     SET
-                        marke = :marke, 
-                        modell = :modell, 
-                        typ = :typ, 
-                        kennzeichen = :kennzeichen, 
-                        farbe = :farbe, 
-                        tagessatz = :tagessatz, 
+                        marke = :marke,
+                        modell = :modell,
+                        typ = :typ,
+                        kennzeichen = :kennzeichen,
+                        farbe = :farbe,
+                        tagessatz = :tagessatz,
                         sitzplaetze = :sitzplaetze,
                         status = :status,
                         maengel = :maengel,
@@ -395,23 +406,23 @@ Update-Skript, welches individuell viele Attribute eines Fahrzeuges bearbeitet, 
 ### **3.4 fahrzeug_get_single**
 
 ```
-    $abfrage = 'SELECT * FROM ' . $this->tabelle . ' 
-                        WHERE fahrzeug_id = ? 
+    $abfrage = 'SELECT * FROM ' . $this->tabelle . '
+                        WHERE fahrzeug_id = ?
                         LIMIT 0,1';
 ```
 
 ### **3.5 fahrzeug_update**
 
 ```
-    $abfrage = 'UPDATE ' . 
+    $abfrage = 'UPDATE ' .
                 $this->tabelle . '
                     SET
-                        marke = :marke, 
-                        modell = :modell, 
-                        typ = :typ, 
-                        kennzeichen = :kennzeichen, 
-                        farbe = :farbe, 
-                        tagessatz = :tagessatz, 
+                        marke = :marke,
+                        modell = :modell,
+                        typ = :typ,
+                        kennzeichen = :kennzeichen,
+                        farbe = :farbe,
+                        tagessatz = :tagessatz,
                         sitzplaetze = :sitzplaetze,
                         status = :status,
                         maengel = :maengel,

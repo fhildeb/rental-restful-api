@@ -1,13 +1,14 @@
 # **Mitarbeiter**
+
 Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eigenschaften, API-Abfragen und des Backends für Mitarbeiter.
 
-## **1 Attribute und Eigenschaften der Klasse "Mitarbeiter"**
+## **1. Attribute und Eigenschaften der Klasse "Mitarbeiter"**
 
 ```
         vorname
             ->Paramerter:       nötig
             ->Art:              alphabetisch
-            ->Feldinhalt:       begrenzt auf UTF8-Standardzeichen 
+            ->Feldinhalt:       begrenzt auf UTF8-Standardzeichen
             ->Besonderheiten:   Zahlen und Sonderzeichen außer Bindestrich werden nicht erlaubt
                                 min 1, max 100 Zeichen
 
@@ -33,13 +34,15 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
             ->Besonderheiten:   Sonderzeichen begrenzt auf: !$%&()=?[{}]+~#'.:,;-_<>|
 ```
 
-## **2 Abfragen**
+## **2. Abfragen**
+
 ### **2.1 mitarbeiter_create**
+
 Create-Skript, welches einen neuen Mitarbeiter zur Mitarbeiterliste hinzufügt. Alle Attribute sind Pflichtfelder
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/mitarbeiter/mitarbeiter_create.php | CREATE |  --- | --- |
+| Link                                    | Methode | Parameter | URL-Anhang |
+| --------------------------------------- | ------- | --------- | ---------- |
+| /api/mitarbeiter/mitarbeiter_create.php | CREATE  | ---       | ---        |
 
 ### Header
 
@@ -78,11 +81,12 @@ Create-Skript, welches einen neuen Mitarbeiter zur Mitarbeiterliste hinzufügt. 
 ```
 
 ### **2.2 mitarbeiter_delete**
+
 Delete-Skript, welches die Daten eines Mitarbeiters aus der Datenbank entfernt. Der Loginname muss angegeben werden
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/mitarbeiter/mitarbeiter_delete.php | DELETE |  --- | --- |
+| Link                                    | Methode | Parameter | URL-Anhang |
+| --------------------------------------- | ------- | --------- | ---------- |
+| /api/mitarbeiter/mitarbeiter_delete.php | DELETE  | ---       | ---        |
 
 ### Header
 
@@ -119,11 +123,12 @@ Delete-Skript, welches die Daten eines Mitarbeiters aus der Datenbank entfernt. 
 ```
 
 ### **2.3 mitarbeiter_get_all**
+
 Get-Skript, welches den komplette Mitarbeiterliste samt ihrer Anmeldedaten zurückgibt
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/mitarbeiter/mitarbeiter_get_all.php | GET| --- | --- |
+| Link                                     | Methode | Parameter | URL-Anhang |
+| ---------------------------------------- | ------- | --------- | ---------- |
+| /api/mitarbeiter/mitarbeiter_get_all.php | GET     | ---       | ---        |
 
 ### Header
 
@@ -164,11 +169,12 @@ Get-Skript, welches den komplette Mitarbeiterliste samt ihrer Anmeldedaten zurü
 ```
 
 ### **2.4 mitarbeiter_get_all_list**
+
 Get-Skript, welches den komplette Mitarbeiterliste ohne ihre Anmeldedaten zurückgibt
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/mitarbeiter/mitarbeiter_get_all_list.php | GET| --- | --- |
+| Link                                          | Methode | Parameter | URL-Anhang |
+| --------------------------------------------- | ------- | --------- | ---------- |
+| /api/mitarbeiter/mitarbeiter_get_all_list.php | GET     | ---       | ---        |
 
 ### Header
 
@@ -207,11 +213,12 @@ Get-Skript, welches den komplette Mitarbeiterliste ohne ihre Anmeldedaten zurüc
 ```
 
 ### **2.5 mitarbeiter_get_single**
+
 Get-Skript, welches den Mitarbeiter des angegebenen Login-Namens samt Anmeldedaten zurück gibt
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/mitarbeiter/mitarbeiter_get_single.php | GET| kunden_id | /?login_name=amehner19 |
+| Link                                        | Methode | Parameter | URL-Anhang             |
+| ------------------------------------------- | ------- | --------- | ---------------------- |
+| /api/mitarbeiter/mitarbeiter_get_single.php | GET     | kunden_id | /?login_name=amehner19 |
 
 ### Header
 
@@ -246,11 +253,12 @@ Get-Skript, welches den Mitarbeiter des angegebenen Login-Namens samt Anmeldedat
 ```
 
 ### **2.6 mitarbeiter_get_single_list**
+
 Get-Skript, welches den Mitarbeiter des angegebenen Login-Namens ohne Anmeldedaten zurück gibt
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/mitarbeiter/mitarbeiter_get_single_list.php | GET| login_name| /?login_name=amehner19 |
+| Link                                             | Methode | Parameter  | URL-Anhang             |
+| ------------------------------------------------ | ------- | ---------- | ---------------------- |
+| /api/mitarbeiter/mitarbeiter_get_single_list.php | GET     | login_name | /?login_name=amehner19 |
 
 ### Header
 
@@ -283,12 +291,13 @@ Get-Skript, welches den Mitarbeiter des angegebenen Login-Namens ohne Anmeldedat
 ```
 
 ### **2.7 mitarbeiter_update**
+
 Update-Skript, welches individuell viele Attribute eines Mitarbeiters bearbeitet.
 Loginname kann nicht geändert werden
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/mitarbeiter/mitarbeiter_update.php | UPDATE|  --- | --- |
+| Link                                    | Methode | Parameter | URL-Anhang |
+| --------------------------------------- | ------- | --------- | ---------- |
+| /api/mitarbeiter/mitarbeiter_update.php | UPDATE  | ---       | ---        |
 
 ### Header
 
@@ -326,12 +335,13 @@ Loginname kann nicht geändert werden
 ```
 
 ### **2.8 mitarbeiter_check_login**
+
 Update-Skript, welches Passwort des Mitarbeiters prüft. Dazu muss
 er seinen Login-Namen und sein Passwort angeben
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/mitarbeiter/mitarbeiter_check_login.php | POST|  --- | --- |
+| Link                                         | Methode | Parameter | URL-Anhang |
+| -------------------------------------------- | ------- | --------- | ---------- |
+| /api/mitarbeiter/mitarbeiter_check_login.php | POST    | ---       | ---        |
 
 ### Header
 
@@ -367,16 +377,17 @@ er seinen Login-Namen und sein Passwort angeben
     }
 ```
 
-## **3 Backend**
+## **3. Backend**
+
 ### **3.1 mitarbeiter_create**
 
 ```
-    $abfrage = 'INSERT INTO ' . 
+    $abfrage = 'INSERT INTO ' .
                 $this->tabelle . '
                     SET
-                        vorname = :vorname, 
-                        nachname = :nachname, 
-                        login_name = :login_name, 
+                        vorname = :vorname,
+                        nachname = :nachname,
+                        login_name = :login_name,
                         passwort = :passwort ';
 ```
 
@@ -402,26 +413,26 @@ er seinen Login-Namen und sein Passwort angeben
 ### **3.5 mitarbeiter_get_single**
 
 ```
-    $abfrage = 'SELECT * FROM ' . $this->tabelle . ' 
-                        WHERE login_name = ? 
+    $abfrage = 'SELECT * FROM ' . $this->tabelle . '
+                        WHERE login_name = ?
                         LIMIT 0,1';
 ```
 
 ### **3.6 mitarbeiter_get_single_list**
 
 ```
-    $abfrage = 'SELECT * FROM ' . $this->tabelle . ' 
-                        WHERE login_name = ? 
+    $abfrage = 'SELECT * FROM ' . $this->tabelle . '
+                        WHERE login_name = ?
                         LIMIT 0,1';
 ```
 
 ### **3.7 mitarbeiter_update**
 
 ```
-    $abfrage = 'UPDATE ' . 
+    $abfrage = 'UPDATE ' .
                 $this->tabelle . '
                     SET
-                        vorname = :vorname, 
+                        vorname = :vorname,
                         nachname = :nachname,
                         passwort = :passwort
                     WHERE

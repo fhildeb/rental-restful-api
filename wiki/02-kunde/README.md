@@ -1,7 +1,8 @@
 # **Kunde**
+
 Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eigenschaften, API-Abfragen und des Backends für Kunden.
 
-## **1 Attribute und Eigenschaften der Klasse "Kunde"**
+## **1. Attribute und Eigenschaften der Klasse "Kunde"**
 
 ```
     kunden_id
@@ -17,7 +18,7 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
     vorname
         ->Paramerter:       nötig
         ->Art:              alphabetisch
-        ->Feldinhalt:       begrenzt auf UTF8-Standardzeichen 
+        ->Feldinhalt:       begrenzt auf UTF8-Standardzeichen
         ->Besonderheiten:   Zahlen und Sonderzeichen außer Bindestrich werden nicht erlaubt
                             min 1, max 100 Zeichen
 
@@ -97,21 +98,23 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
     fuehrerschein
         ->Paramerter:       nötig
         ->Art:              numerisch
-        ->Feldinhalt:       begrenzt auf Hexadezimalzahl welche im String 
-                            übergeben wird. In der Datenbank wird dieser als Bitfolge 
+        ->Feldinhalt:       begrenzt auf Hexadezimalzahl welche im String
+                            übergeben wird. In der Datenbank wird dieser als Bitfolge
                             mit maximal 64 Stellen gespeichert
         ->Besonderheiten:   Vor dem Zahlenwert wird 0x vorangesetzt
                             maximal 7 Stellen lang (inklusive 0x)
                             min 3, max 7 Zeichen
 ```
 
-## **2 Abfragen**
+## **2. Abfragen**
+
 ### **2.1 kunde_create**
+
 Create-Skript, welches einen neuen Kunden zum Kundenstamm hinzufügt. Alle Attribute sind Pflichtfelder
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/kunde/kunde_create.php | CREATE |  --- | --- |
+| Link                        | Methode | Parameter | URL-Anhang |
+| --------------------------- | ------- | --------- | ---------- |
+| /api/kunde/kunde_create.php | CREATE  | ---       | ---        |
 
 ### Header
 
@@ -158,12 +161,13 @@ Create-Skript, welches einen neuen Kunden zum Kundenstamm hinzufügt. Alle Attri
 ```
 
 ### **2.2 kunde_delete**
+
 Delete-Skript, welches die Daten eines Kunden zur angegebenen Identifikationsnummer aus der Datenbank entfernt,
 wenn keine Vermietungsfälle in Verbindung stehen
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/kunde/kunde_delete.php | DELETE |  --- | --- |
+| Link                        | Methode | Parameter | URL-Anhang |
+| --------------------------- | ------- | --------- | ---------- |
+| /api/kunde/kunde_delete.php | DELETE  | ---       | ---        |
 
 ### Header
 
@@ -199,11 +203,12 @@ wenn keine Vermietungsfälle in Verbindung stehen
 ```
 
 ### **2.3 kunde_get_all**
+
 Get-Skript, welches den kompletten Kundenstamm samt ihrer Anmeldedaten zurückgibt
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/kunde/kunde_get_all.php | GET| --- | --- |
+| Link                         | Methode | Parameter | URL-Anhang |
+| ---------------------------- | ------- | --------- | ---------- |
+| /api/kunde/kunde_get_all.php | GET     | ---       | ---        |
 
 ### Header
 
@@ -253,11 +258,12 @@ Get-Skript, welches den kompletten Kundenstamm samt ihrer Anmeldedaten zurückgi
 ```
 
 ### **2.4 kunde_get_all_list**
+
 Get-Skript, welches den kompletten Kundenstamm ohne ihre Anmeldedaten zurückgibt
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/kunde/kunde_get_all_list.php | GET| --- | --- |
+| Link                              | Methode | Parameter | URL-Anhang |
+| --------------------------------- | ------- | --------- | ---------- |
+| /api/kunde/kunde_get_all_list.php | GET     | ---       | ---        |
 
 ### Header
 
@@ -305,11 +311,12 @@ Get-Skript, welches den kompletten Kundenstamm ohne ihre Anmeldedaten zurückgib
 ```
 
 ### **2.5 kunde_get_single**
+
 Get-Skript, welches den Kunden der angegebenen Identifikationsnummer samt Anmeldedaten zurück gibt
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/kunde/kunde_get_single.php | GET| kunden_id | /?kunden_id=74 |
+| Link                            | Methode | Parameter | URL-Anhang     |
+| ------------------------------- | ------- | --------- | -------------- |
+| /api/kunde/kunde_get_single.php | GET     | kunden_id | /?kunden_id=74 |
 
 ### Header
 
@@ -353,11 +360,12 @@ Get-Skript, welches den Kunden der angegebenen Identifikationsnummer samt Anmeld
 ```
 
 ### **2.6 kunde_get_single_list**
+
 Get-Skript, welches den Kunden der angegebenen Identifikationsnummer ohne Anmeldedaten zurück gibt
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/kunde/kunde_get_single_list.php | GET| kunden_id | /?kunden_id=74 |
+| Link                                 | Methode | Parameter | URL-Anhang     |
+| ------------------------------------ | ------- | --------- | -------------- |
+| /api/kunde/kunde_get_single_list.php | GET     | kunden_id | /?kunden_id=74 |
 
 ### Header
 
@@ -399,11 +407,12 @@ Get-Skript, welches den Kunden der angegebenen Identifikationsnummer ohne Anmeld
 ```
 
 ### **2.7 kunde_update**
+
 Update-Skript, welches individuell viele Attribute eines Kunden der angegebenen Identifikationsnummer bearbeitet. Alle Attribute außer die Identifikationsnummer können übergeben und somit geändert werden
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/kunde/kunde_update.php | UPDATE|  --- | --- |
+| Link                        | Methode | Parameter | URL-Anhang |
+| --------------------------- | ------- | --------- | ---------- |
+| /api/kunde/kunde_update.php | UPDATE  | ---       | ---        |
 
 ### Header
 
@@ -441,12 +450,13 @@ Update-Skript, welches individuell viele Attribute eines Kunden der angegebenen 
 ```
 
 ### **2.8 kunde_check_login**
+
 Update-Skript, welches Passwort des Kunden prüft. Dazu muss
 er seine Email und Kennwort übergeben.
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/kunde/kunde_check_login.php | POST|  --- | --- |
+| Link                             | Methode | Parameter | URL-Anhang |
+| -------------------------------- | ------- | --------- | ---------- |
+| /api/kunde/kunde_check_login.php | POST    | ---       | ---        |
 
 ### Header
 
@@ -482,19 +492,20 @@ er seine Email und Kennwort übergeben.
     }
 ```
 
-## **3 Backend**
+## **3. Backend**
+
 ### **3.1 kunde_create**
 
 ```
-    $abfrage = 'INSERT INTO ' . 
+    $abfrage = 'INSERT INTO ' .
                 $this->tabelle . '
                     SET
-                        vorname = :vorname, 
-                        nachname = :nachname, 
-                        strasse = :strasse, 
-                        hausnr = :hausnr, 
-                        ort = :ort, 
-                        land = :land, 
+                        vorname = :vorname,
+                        nachname = :nachname,
+                        strasse = :strasse,
+                        hausnr = :hausnr,
+                        ort = :ort,
+                        land = :land,
                         plz = :plz,
                         email = :email,
                         passwort = :passwort,
@@ -518,40 +529,40 @@ er seine Email und Kennwort übergeben.
 ### **3.4 kunde_get_all_list**
 
 ```
-    $abfrage = 'SELECT  kunden_id, vorname, nachname, 
-                                strasse, hausnr, ort, land, plz, 
-                                telefonnummer, geburtsdatum, fuehrerschein 
+    $abfrage = 'SELECT  kunden_id, vorname, nachname,
+                                strasse, hausnr, ort, land, plz,
+                                telefonnummer, geburtsdatum, fuehrerschein
                         FROM ' . $this->tabelle . ' ORDER BY kunden_id DESC';
 ```
 
 ### **3.5 kunde_get_single**
 
 ```
-    $abfrage = 'SELECT * FROM ' . $this->tabelle . ' 
-                        WHERE kunden_id = ? 
+    $abfrage = 'SELECT * FROM ' . $this->tabelle . '
+                        WHERE kunden_id = ?
                         LIMIT 0,1';
 ```
 
 ### **3.6 kunde_get_single_list**
 
 ```
-    $abfrage = 'SELECT * FROM ' . $this->tabelle . ' 
-                        WHERE kunden_id = ? 
+    $abfrage = 'SELECT * FROM ' . $this->tabelle . '
+                        WHERE kunden_id = ?
                         LIMIT 0,1';
 ```
 
 ### **3.7 kunde_update**
 
 ```
-    $abfrage = 'UPDATE ' . 
+    $abfrage = 'UPDATE ' .
                 $this->tabelle . '
                     SET
-                        vorname = :vorname, 
-                        nachname = :nachname, 
-                        strasse = :strasse, 
-                        hausnr = :hausnr, 
-                        ort = :ort, 
-                        land = :land, 
+                        vorname = :vorname,
+                        nachname = :nachname,
+                        strasse = :strasse,
+                        hausnr = :hausnr,
+                        ort = :ort,
+                        land = :land,
                         plz = :plz,
                         email = :email,
                         passwort = :passwort,
@@ -573,4 +584,3 @@ er seine Email und Kennwort übergeben.
 ```
     $abfrage = 'SELECT * FROM ' . $this->tabelle . ' WHERE email = :email LIMIT 0,1';
 ```
-

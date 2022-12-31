@@ -1,6 +1,8 @@
 # **Firmendaten**
+
 Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eigenschaften, API-Abfragen und des Backends für Firmendaten.
-## **1 Attribute und Eigenschaften der Klasse "Firmendaten"**
+
+## **1. Attribute und Eigenschaften der Klasse "Firmendaten"**
 
 ```
         firmendaten_id
@@ -18,7 +20,7 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
             ->Paramerter:       nötig
             ->Art:              alphanumerisch
             ->Feldinhalt:       begrenzt auf UTF8-Standardzeichen
-            ->Besonderheiten:   Buchstaben und Sonderzeichen außer Plus und 
+            ->Besonderheiten:   Buchstaben und Sonderzeichen außer Plus und
                                 Bindestrich werden nicht akzeptiert
                                 keine Leerzeichen
                                 min 5, max 19 Zeichen
@@ -27,7 +29,7 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
             ->Paramerter:       nötig (doch optional bei Änderungen)
             ->Art:              alphabetisch
             ->Feldinhalt:       begrenzt auf UTF8-Standardzeichen
-            ->Besonderheiten:   Zahlen und Sonderzeichen außer Punkt und Bindestrich 
+            ->Besonderheiten:   Zahlen und Sonderzeichen außer Punkt und Bindestrich
                                 wird nicht akzeptiert
                                 min 1, max 100 Zeichen
 
@@ -63,14 +65,14 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
             ->Paramerter:       nötig
             ->Art:              alphanumerisch
             ->Feldinhalt:       begrenzt auf UTF8-Standardzeichen
-            ->Besonderheiten:   Sonderzeichen außer Unterschtrich, Bindestrich, Punkt 
+            ->Besonderheiten:   Sonderzeichen außer Unterschtrich, Bindestrich, Punkt
                                 und Slash werden nicht akzeptiert
             ->Standardwert:     ["/data/logo/logo.png"] (String)
 
         vorname_inhaber
             ->Paramerter:       nötig
             ->Art:              alphabetisch
-            ->Feldinhalt:       begrenzt auf UTF8-Standardzeichen 
+            ->Feldinhalt:       begrenzt auf UTF8-Standardzeichen
             ->Besonderheiten:   Zahlen und Sonderzeichen außer Bindestrich werden nicht erlaubt
                                 min 1, max 100 Zeichen
 
@@ -89,14 +91,14 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
                                 keine Leerzeichen
                                 min 1, max 50 Zeichen
         iban
-                ->Paramerter:       nötig 
+                ->Paramerter:       nötig
                 ->Art:              alphabetisch
                 ->Feldinhalt:       begrenzt auf UTF8-Sonderzeichen
                 ->Besonderheiten:   Sonderzeichen und Kleinbuchstaben werden nicht akzeptiert
                                     keine Leerzeichen
                                     min 1, max 50 Zeichen
         bic
-                ->Paramerter:       nötig 
+                ->Paramerter:       nötig
                 ->Art:              alphabetisch
                 ->Feldinhalt:       begrenzt auf UTF8-Sonderzeichen
                 ->Besonderheiten:   Sonderzeichen und Kleinbuchstaben werden nicht akzeptiert
@@ -116,14 +118,15 @@ Hier befinden sich alle wichtigen Informationen bezüglich der Attribute und Eig
                             Format = HH:mm
 ```
 
-## **2 Abfragen**
+## **2. Abfragen**
 
 ### **2.1 firmendaten_get**
+
 Get-Skript, welches die Firmendaten zurück gibt
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/firmendaten/firmendaten_get.php | GET|  |  |
+| Link                                 | Methode | Parameter | URL-Anhang |
+| ------------------------------------ | ------- | --------- | ---------- |
+| /api/firmendaten/firmendaten_get.php | GET     |           |            |
 
 ### Header
 
@@ -168,11 +171,12 @@ Get-Skript, welches die Firmendaten zurück gibt
 ```
 
 ### **2.2 firmendaten_update**
+
 Update-Skript, welches individuell viele Attribute der Firmendaten bearbeitet. Die Attribute `telefon, strasse, hausnummer, plz, ort, firmenname, vorname_inhaber, nachname_inhaber, oeffnungszeiten` können optional angegeben werden um Daten zu aktualisieren.
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/firmendaten/firmendaten_update.php | UPDATE|  --- | --- |
+| Link                                    | Methode | Parameter | URL-Anhang |
+| --------------------------------------- | ------- | --------- | ---------- |
+| /api/firmendaten/firmendaten_update.php | UPDATE  | ---       | ---        |
 
 ### Header
 
@@ -208,11 +212,12 @@ Update-Skript, welches individuell viele Attribute der Firmendaten bearbeitet. D
 ```
 
 ### **2.3 firmendaten_for_pdf**
+
 Get-Skript, welches die Firmendaten und das Logo als Base64 zurück gibt
 
-| Link | Methode | Parameter | URL-Anhang |
-|--|--|--|--|
-| /api/firmendaten/firmendaten_for_pdf.php | GET |  |  |
+| Link                                     | Methode | Parameter | URL-Anhang |
+| ---------------------------------------- | ------- | --------- | ---------- |
+| /api/firmendaten/firmendaten_for_pdf.php | GET     |           |            |
 
 ### Header
 
@@ -256,25 +261,26 @@ Get-Skript, welches die Firmendaten und das Logo als Base64 zurück gibt
     }
 ```
 
-## **3 Backend**
+## **3. Backend**
+
 ### **3.1 firmendaten_get**
 
 ```
-            $abfrage = 'SELECT * FROM ' . $this->tabelle . ' 
+            $abfrage = 'SELECT * FROM ' . $this->tabelle . '
                         WHERE firmendaten_id = 1 LIMIT 0,1';
 ```
 
 ### **3.5 firmendaten_update**
 
 ```
-            $abfrage = 'UPDATE ' . 
+            $abfrage = 'UPDATE ' .
                 $this->tabelle . '
                     SET
-                        telefon = :telefon, 
-                        strasse = :strasse, 
-                        hausnummer = :hausnummer, 
-                        plz = :plz, 
-                        ort = :ort, 
+                        telefon = :telefon,
+                        strasse = :strasse,
+                        hausnummer = :hausnummer,
+                        plz = :plz,
+                        ort = :ort,
                         firmenname = :firmenname,
                         logo_url = :logo_url,
                         vorname_inhaber = :vorname_inhaber,
